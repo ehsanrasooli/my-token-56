@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SimpleStorage {
+    string public message;
+
+    // در زمان دیپلوی، پیام اولیه را دریافت می‌کند
+    constructor(string memory initialMessage) {
+        message = initialMessage;
+    }
+
+    // تابع برای تغییر دادن پیام ذخیره شده
+    function updateMessage(string memory newMessage) public {
+        message = newMessage;
+    }
+}
